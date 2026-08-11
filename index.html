@@ -160,7 +160,7 @@ h1 .hl::after{
 }
 .hero__sub{font-size:clamp(15.5px,1.8vw,17.5px);color:var(--slate);margin:24px 0 0;max-width:52ch}
 .hero__sub b{color:var(--ink);font-weight:700}
-.pains{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:11px;max-width:50ch}
+.pains{list-:none;margin:28px 0 0;padding:0;display:grid;gap:11px;max-width:50ch}
 .pains li{
   display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--ink-2);
   padding-left:0;line-height:1.7;
@@ -324,7 +324,7 @@ h1 .hl::after{
 .who__badge span{font-size:11.5px;color:var(--slate-2)}
 .who__name{font-size:clamp(26px,3.4vw,34px);margin-bottom:6px}
 .who__role{font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;color:var(--brass);margin:0 0 26px}
-.creds{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--rule)}
+.creds{list-:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--rule)}
 .creds li{
   padding:14px 0;border-bottom:1px solid var(--rule-2);font-size:15px;
   display:flex;gap:14px;align-items:baseline;
@@ -358,7 +358,7 @@ h1 .hl::after{
 .price__amt{font-family:var(--mono);font-size:clamp(38px,5.4vw,54px);font-weight:600;line-height:1;margin:18px 0 6px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .price__amt small{font-size:.4em;font-weight:400;color:rgba(255,255,255,.62);letter-spacing:.02em}
 .price__note{font-size:13.5px;color:rgba(255,255,255,.6);margin:0 0 24px}
-.price__incl{list-style:none;margin:24px 0 0;padding:22px 0 0;border-top:1px solid rgba(255,255,255,.15);display:grid;gap:10px;font-size:14px;color:rgba(255,255,255,.82)}
+.price__incl{list-:none;margin:24px 0 0;padding:22px 0 0;border-top:1px solid rgba(255,255,255,.15);display:grid;gap:10px;font-size:14px;color:rgba(255,255,255,.82)}
 .price__incl li{display:flex;gap:10px}
 .price__incl li::before{content:"—";color:var(--brass);flex:none}
 .phase{
@@ -427,7 +427,7 @@ h1 .hl::after{
 .faq{border-top:1px solid var(--rule)}
 .faq details{border-bottom:1px solid var(--rule);padding:0}
 .faq summary{
-  list-style:none;cursor:pointer;padding:22px 46px 22px 0;position:relative;
+  list-:none;cursor:pointer;padding:22px 46px 22px 0;position:relative;
   font-family:var(--serif);font-weight:700;font-size:clamp(16.5px,2vw,19px);
   line-height:1.55;transition:color .2s;
 }
@@ -448,7 +448,7 @@ h1 .hl::after{
 .ftr__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(26px,4vw,50px)}
 .ftr h4{color:#fff;font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;margin-bottom:16px;color:rgba(237,240,236,.45)}
 .ftr__brand{font-family:var(--serif);font-weight:900;font-size:20px;color:#fff;margin-bottom:12px}
-.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.ftr ul{list-:none;margin:0;padding:0;display:grid;gap:9px}
 .ftr a{text-decoration:none;transition:color .18s}
 .ftr a:hover{color:#fff}
 .ftr__base{
@@ -497,38 +497,31 @@ h1 .hl::after{
   .rv{opacity:1;transform:none}
   .axis__fill{width:100%}.mark{opacity:1;transform:translateX(-50%)}
 }
-/* =========================================================
-   手機版 RWD 優化修正 (請貼在 </style> 前)
-   ========================================================= */
 
-/* 1. 全局：強制收斂橫向溢出，解決 iOS 滑動白邊問題 */
 html, body {
   overflow-x: hidden;
   width: 100%;
 }
 
-/* 2. 頁首 (Header)：解決極窄螢幕 (如 iPhone SE) 的左右擠壓 */
 @media (max-width: 480px) {
   .hdr .wrap { gap: 10px; }
   .brand__seal { width: 30px; height: 30px; }
   .brand__name { font-size: 15px; }
-  .brand__sub { display: none; } /* 隱藏次標題以釋放空間 */
+  .brand__sub { display: none; } 
   .hdr .btn { padding: 8px 12px; font-size: 13px; gap: 6px; }
   .hdr .btn svg { width: 16px; height: 16px; }
 }
 
-/* 3. Hero 鋼印：修正 right 負值撐破容器的問題 */
 @media (max-width: 900px) {
   .hero__fig { max-width: 100%; width: 100%; padding-right: 10px; margin: 0 auto; }
   .hero__stamp { right: 0px; bottom: -10px; width: 76px; height: 76px; }
 }
 
-/* 4. 時間軸 (Priority)：取消強制不換行，微調節點比例 */
 @media (max-width: 720px) {
   .mark { width: 120px; }
   .mark--you { left: 18%; }
   .mark--rival { left: 82%; }
-  /* 取消強制不換行，讓過長的文字自然往下掉 */
+
   .mark__flag { font-size: 11px; padding: 6px 8px; white-space: normal; line-height: 1.4; text-align: center; }
   .axis { padding-top: 85px; }
   
@@ -536,12 +529,11 @@ html, body {
   .tick__d { font-size: 10px; letter-spacing: 0; word-break: keep-all; }
 }
 @media (max-width: 380px) {
-  /* 針對 375px 以下進一步微調 */
+
   .mark__flag { font-size: 10.5px; padding: 4px 6px; }
   .tick__d { font-size: 9px; transform: scale(0.95); transform-origin: left top; }
 }
 
-/* 5. 差異對照表 (Compare)：改為手機閱讀更友善的卡片式排版 */
 @media (max-width: 720px) {
   .cmp { border: none; background: transparent; box-shadow: none; }
   .cmp tbody tr { 
@@ -560,7 +552,6 @@ html, body {
   }
 }
 
-/* 6. CTA 背景裝飾：限制最大寬度防止溢出 */
 .cta::before {
   max-width: 100vw;
 }
